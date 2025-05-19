@@ -11,13 +11,13 @@ export default function SocialBar() {
   ];
 
   return (
-    <div className="fixed right-6 p-2 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-4">
+    <div className="fixed right-10 p-2 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-4">
       {socialLinks.map((social, index) => (
         <a
           key={index}
           href={social.url}
           aria-label={`Follow us on ${social.name}`}
-          className="w-10 h-10 bg-white border border-green-800 bg-opacity-30 hover:bg-opacity-80 text-lime-700 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110 backdrop-blur-sm border-opacity-20"
+          className="w-10 h-10 bg-white border border-green-600 bg-opacity-30 hover:bg-opacity-80 text-lime-600 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110 backdrop-blur-sm border-opacity-20"
         >
           {social.icon === 'facebook' && (
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
