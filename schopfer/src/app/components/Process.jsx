@@ -1,120 +1,191 @@
 // ProcessSection.jsx
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import { ClipboardDocumentIcon, PhotoIcon, PlayIcon, DevicePhoneMobileIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
 export default function Process() {
-  // Define more subdued, toned-down colors for each process step
+  const [hoveredStep, setHoveredStep] = useState(null);
+
+  // Brand cohesive colors - white cards with lime green accents
   const stepColors = [
     {
-      bg: "bg-[#235789]", // Subdued blue
-      text: "text-white",
-      iconBg: "bg-white",
-      iconColor: "text-[#001F3F]",
-      border: "border-[#94B4C1]/40"
+      bg: "bg-white", // White background
+      text: "text-[#1a365d]", // Navy text
+      iconBg: "bg-[#84cc16]", // Lime green icon background
+      iconColor: "text-white", // White icon
+      border: "border-[#84cc16]", // Lime green border
+      numberBg: "bg-white", // Lime green number background
+      numberText: "text-[#1a365d]" // White number text
     },
     {
-      bg: "bg-[#29698C]", // Muted teal blue
-      text: "text-white",
-      iconBg: "bg-white",
-      iconColor: "text-[#001F3F]",
-      border: "border-[#94B4C1]/40"
+      bg: "bg-white",
+      text: "text-[#1a365d]",
+      iconBg: "bg-[#84cc16]",
+      iconColor: "text-white",
+      border: "border-[#84cc16]",
+      numberBg: "bg-white",
+      numberText: "text-[#1a365d]"
     },
     {
-      bg: "bg-[#2F7CA0]", // Medium ocean blue
-      text: "text-white",
-      iconBg: "bg-white",
-      iconColor: "text-[#001F3F]",
-      border: "border-[#94B4C1]/40"
+      bg: "bg-white",
+      text: "text-[#1a365d]",
+      iconBg: "bg-[#84cc16]",
+      iconColor: "text-white",
+      border: "border-[#84cc16]",
+      numberBg: "bg-white",
+      numberText: "text-[#1a365d]"
     },
     {
-      bg: "bg-[#3A8FB7]", // Soft sky blue
-      text: "text-white",
-      iconBg: "bg-white",
-      iconColor: "text-[#001F3F]",
-      border: "border-[#94B4C1]/40"
+      bg: "bg-white",
+      text: "text-[#1a365d]",
+      iconBg: "bg-[#84cc16]",
+      iconColor: "text-white",
+      border: "border-[#84cc16]",
+      numberBg: "bg-white",
+      numberText: "text-[#1a365d]"
     },
     {
-      bg: "bg-[#2A6495]", // Steel blue
-      text: "text-white",
-      iconBg: "bg-white",
-      iconColor: "text-[#001F3F]",
-      border: "border-[#94B4C1]/40"
+      bg: "bg-white",
+      text: "text-[#1a365d]",
+      iconBg: "bg-[#84cc16]",
+      iconColor: "text-white",
+      border: "border-[#84cc16]",
+      numberBg: "bg-white",
+      numberText: "text-[#1a365d]"
     }
   ];
 
   const processSteps = [
     {
       number: "01",
-      icon: <ClipboardDocumentIcon className="h-8 w-8" />,
-      title: "Discovery and Analysis",
+      icon: <ClipboardDocumentIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />,
+      title: "Discovery & Analysis",
       description: "We begin by analyzing your products, target audience, and current listings to identify improvement opportunities."
     },
     {
       number: "02",
-      icon: <PhotoIcon className="h-8 w-8" />,
-      title: "Strategy and Development",
+      icon: <PhotoIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />,
+      title: "Strategy & Development",
       description: "Our specialists create professional photography, compelling copy, and engaging videos for your products."
     },
     {
       number: "03",
-      icon: <PlayIcon className="h-8 w-8" />,
+      icon: <PlayIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />,
       title: "Production & Creation",
       description: "We optimize and upload your content across e-commerce platforms, ensuring proper formatting and presentation."
     },
     {
       number: "04",
-      icon: <DevicePhoneMobileIcon className="h-8 w-8" />,
+      icon: <DevicePhoneMobileIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />,
       title: "Optimisation & Implementation",
       description: "We optimize and upload your content across e-commerce platforms, ensuring proper formatting and presentation."
     },
     {
       number: "05",
-      icon: <ChartBarIcon className="h-8 w-8" />,
+      icon: <ChartBarIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />,
       title: "Analysis & Refinement",
       description: "We track key metrics and make data-driven refinements to maximize your listing performance."
     },
   ];
 
   return (
-    <section className="py-20 pt-24 section h-screen bg-[#F6FCDF] border-t border-[#94B4C1]/40">
-      <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-0">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#1E488F] tracking-tight sm:text-5xl">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 lg:pt-24 section min-h-screen lg:h-screen bg-[#F6FCDF] border-t border-[#94B4C1]/40 flex items-center">
+      <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-0 w-full">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-18">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-bold text-[#1E488F] tracking-tight">
             Our Process
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-[#001F3F]/80">
+          <p className="mt-3 sm:mt-4 max-w-4xl mx-auto font-medium text-base sm:text-lg lg:text-[20px] text-[#001F3F]/80 px-4">
             Our streamlined approach delivers quality results with 
             industry-leading turnaround times
           </p>
         </div>
 
         <div className="relative">
-          {/* Timeline connector */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#259b23] via-[#0f9733] to-[#3A8FB7] transform -translate-y-1/2 z-0"></div>
+          {/* Timeline connector - updated to lime green */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#84cc16] via-[#65a30d] to-[#84cc16] transform -translate-y-1/2 z-0"></div>
           
           {/* Process steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 relative z-10">
-            {processSteps.map((step, index) => (
-              <div 
-                key={index} 
-                className={`
-                  flex flex-col items-center transition-all duration-300 ease-in-out
-                  ${index % 2 === 0 ? 'md:mt-0' : 'md:mt-16'}
-                  ${index === 1 || index === 3 ? 'md:col-span-1 lg:col-span-1' : ''}
-                `}
-              >
-                <div className={`${stepColors[index].bg} rounded-2xl p-4 ${stepColors[index].border} border shadow-md hover:shadow-lg transition-shadow duration-300 max-w-4xl max-h-[350px]`}>
-                  <div className="flex flex-col items-center mb-4">
-                    <span className={`text-3xl font-bold ${stepColors[index].text} mb-3`}>{step.number}</span>
-                    <div className={`p-3 ${stepColors[index].iconBg} border-2 border-[#056403] rounded-full shadow-md mb-3`}>
-                      {React.cloneElement(step.icon, { className: `h-8 w-8 ${stepColors[index].iconColor}` })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-4 relative z-10">
+            {processSteps.map((step, index) => {
+              const isHovered = hoveredStep !== null && index >= hoveredStep;
+              const animationDelay = hoveredStep !== null ? (index - hoveredStep) * 100 : 0;
+              
+              return (
+                <div 
+                  key={index} 
+                  className={`
+                    flex flex-col items-center transition-all duration-300 ease-in-out
+                    ${index % 2 === 0 ? 'lg:mt-0' : 'lg:mt-16'}
+                  `}
+                  onMouseEnter={() => setHoveredStep(index)}
+                  onMouseLeave={() => setHoveredStep(null)}
+                >
+                  <div 
+                    className={`
+                      ${stepColors[index].bg} rounded-2xl p-3 sm:p-4 ${stepColors[index].border} border-2 
+                      shadow-md transition-all duration-300 w-full max-w-xs sm:max-w-sm lg:max-w-4xl lg:max-h-[350px]
+                      ${isHovered ? 'transform -translate-y-2 shadow-xl scale-105 bg-gradient-to-br from-white to-[#84cc16]/5' : 'hover:shadow-lg hover:-translate-y-1'}
+                    `}
+                    style={{
+                      transitionDelay: isHovered ? `${animationDelay}ms` : '0ms'
+                    }}
+                  >
+                    <div className="flex flex-col items-center mb-3 sm:mb-4">
+                      <div 
+                        className={`
+                          ${stepColors[index].numberBg} rounded-full w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 flex items-center justify-center mb-2 sm:mb-3
+                          transition-all duration-300
+                          ${isHovered ? '' : ''}
+                        `}
+                        style={{
+                          transitionDelay: isHovered ? `${animationDelay + 50}ms` : '0ms'
+                        }}
+                      >
+                        <span className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${stepColors[index].numberText}`}>{step.number}</span>
+                      </div>
+                      <div 
+                        className={`
+                          p-2 sm:p-2.5 lg:p-3 ${stepColors[index].iconBg} rounded-full shadow-md mb-2 sm:mb-3
+                          transition-all duration-300
+                          ${isHovered ? 'transform scale-110 shadow-lg' : ''}
+                        `}
+                        style={{
+                          transitionDelay: isHovered ? `${animationDelay + 100}ms` : '0ms'
+                        }}
+                      >
+                        {React.cloneElement(step.icon, { className: `h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 ${stepColors[index].iconColor}` })}
+                      </div>
+                      <h3 
+                        className={`
+                          text-sm sm:text-base lg:text-[18px] font-semibold ${stepColors[index].text} text-center leading-tight
+                          transition-all duration-300
+                          ${isHovered ? 'transform scale-105' : ''}
+                        `}
+                        style={{
+                          transitionDelay: isHovered ? `${animationDelay + 150}ms` : '0ms'
+                        }}
+                      >
+                        {step.title}
+                      </h3>
                     </div>
-                    <h3 className={`text-xl font-semibold ${stepColors[index].text} text-center`}>{step.title}</h3>
+                    <p 
+                      className={`
+                        text-xs sm:text-sm lg:text-[15px] leading-relaxed
+                        ${stepColors[index].text}/80 text-center
+                        transition-all duration-300
+                        ${isHovered ? 'opacity-100' : ''}
+                      `}
+                      style={{
+                        transitionDelay: isHovered ? `${animationDelay + 200}ms` : '0ms'
+                      }}
+                    >
+                      {step.description}
+                    </p>
                   </div>
-                  <p className={`${stepColors[index].text}/90 text-center`}>{step.description}</p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

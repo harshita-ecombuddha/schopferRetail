@@ -28,7 +28,7 @@ export default function Header() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center space-x-3">
-          <button className="bg-[#000] text-[#fff] font-bold py-2 px-5 rounded-lg hover:bg-opacity-90 transition-all" onClick={() => router.push("/contact")}>
+          <button className="bg-[#000] text-[#fff] font-bold py-2 px-5 rounded-lg hover:bg-[#040404cb] transition-all" onClick={() => router.push("/contact")}>
             Contact Us
           </button>
         </div>

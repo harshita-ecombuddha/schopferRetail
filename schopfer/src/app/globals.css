@@ -10,6 +10,8 @@
   --black: #000;
   --white: #FFF;
   --green-800: #065f46;
+  /* --text-xs: 5px; --text-sm: 10px; --text-md: 15px;
+  --text-lg: 25px; --text-xl: 40px; --text-xxl: 60px; */
 }
 
 :root {
@@ -83,6 +85,7 @@ body {
 button, a{
   cursor:pointer;
 }
+
 
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */

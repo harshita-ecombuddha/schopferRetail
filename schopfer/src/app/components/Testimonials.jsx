@@ -85,7 +85,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-12 px-4 md:py-42 md:px-6 lg:px-10 section h-screen bg-[#F6FCDF] border-t border-[#94B4C1]/40">
-      <h2 className="text-3xl md:text-4xl font-semibold text-[#1E488F] mb-8 md:mb-12 text-center">
+      <h2 className="text-3xl md:text-[40px] font-bold text-[#1E488F] mb-8 md:mb-12 text-center">
         Hear from our clients
       </h2>
 
@@ -118,14 +118,14 @@ export default function Testimonials() {
               key={`${currentIndex}-${index}`}
               className="bg-white p-4 md:p-6 rounded-xl shadow-sm h-full flex flex-col justify-between border border-[#94B4C1]/30"
             >
-              <p className="text-[#001F3F] text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
+              <p className="text-[#001F3F] text-sm md:text-[16px] mb-4 md:mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </p>
               <div>
-                <p className="text-[#1E488F] font-semibold">
+                <p className="text-[#1E488F] font-semibold text-[17px]">
                   {testimonial.name}
                 </p>
-                <p className="text-[#94B4C1] text-sm">
+                <p className="text-[#94B4C1] text-sm font-medium">
                   {testimonial.company}
                 </p>
               </div>

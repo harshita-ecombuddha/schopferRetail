@@ -9,35 +9,35 @@ export default function Home() {
   const faqData = [
     {
       question: "Why should I partner with a specialized e-commerce content agency instead of creating listing content in-house?",
-      answer: "Our specialized expertise delivers results that in-house teams often struggle to achieve. While your team excels at product knowledge, we bring deep understanding of marketplace algorithms, consumer psychology, and technical optimization. With over 50 years of combined e-commerce experience, our systematic approach transforms visibility challenges into measurable outcomes. Additionally, our dedicated team processes high volumes efficiently, allowing your staff to focus on core business activities rather than content creation."
+      answer: "Our specialized expertise delivers results that in-house teams often struggle to achieve. While your team excels at product knowledge, we bring deep understanding of marketplace algorithms, consumer psychology, and technical optimization. Our dedicated team processes high volumes efficiently, allowing your staff to focus on core business activities rather than content creation."
     },
     {
       question: "Which e-commerce platforms and marketplaces do you specialize in?",
-      answer: "We have established our expertise primarily on Amazon, mastering its specific requirements and ranking factors. Our experience extends across other major Indian e-commerce platforms including Flipkart and Myntra. Our team maintains comprehensive knowledge of platform-specific guidelines and algorithm updates, ensuring your listings perform optimally within each marketplace's unique environment. This multi-platform expertise allows your products to maintain consistent performance regardless of where customers discover them."
+      answer: "We have established our expertise primarily on Amazon, mastering its specific requirements and ranking factors. However, our experience extends across other major Indian e-commerce platforms including Flipkart and Myntra."
     },
     {
       question: "How do you structure pricing for e-commerce content creation services?",
-      answer: "We develop customized proposals based on a strategic assessment of your specific needs. Our pricing framework considers product complexity, service level requirements (from basic listings to enhanced A+ content), volume, and deliverable specifications. Rather than operating on a fixed-price model, we create tailored solutions that align with your business objectives. Our clients consistently view our services as strategic investments that deliver substantial returns through increased visibility, higher conversion rates, and reduced operational costs from fewer returns."
+      answer: "We develop customized proposals based on a strategic assessment of your specific needs. Our pricing framework considers product complexity, service level requirements (from basic listings to enhanced A+ content), volume, and deliverable specifications."
     },
     {
       question: "What is your typical timeline for delivering complete product listings?",
-      answer: "We prioritize efficient delivery without compromising our quality standards. Our systematic approach and specialized workflows enable us to maintain consistency and excellence while meeting business timelines. Project schedules vary based on scope, product complexity, and service level requirements—a comprehensive product catalog with custom photography follows a different timeline than standard listings. After our initial assessment, we provide a detailed project plan with clear milestones, ensuring transparency throughout the implementation process."
+      answer: "We prioritize efficient delivery without compromising our quality standards. Our systematic approach and specialized workflows enable us to maintain consistency and excellence while meeting business timelines. Project schedules vary based on scope, product complexity, and service level requirements."
     },
     {
       question: "What specific information and materials will you need from our team to create effective product listings?",
-      answer: "We begin with the product information you currently have—whether comprehensive or minimal—including physical samples, existing catalogs, technical specifications, and brand guidelines. Before initiating the project, we conduct a thorough assessment to identify any additional data requirements. Our process is most effective when we understand your unique selling propositions, target audience demographics, and competitive landscape."
+      answer: "We begin with the product information you currently have—whether comprehensive or minimal—including physical samples, existing catalogs, technical specifications, and brand guidelines. Before initiating the project, we conduct a thorough assessment to identify any additional data requirements."
     },
     {
       question: "Beyond creating quality listings, how do your services directly impact sales performance?",
-      answer: "Our approach directly enhances three critical performance metrics: visibility (our SEO-optimized content increases organic discovery by 22%), conversion (compelling content and strategic visuals double conversion rates from industry averages), and customer satisfaction (accurate descriptions reduce return rates from 20%+ to just 5%). These improvements translate to measurable revenue growth and reduced operational costs. Additionally, the comprehensive digital assets we create provide long-term value that extends beyond marketplace listings to other marketing channels."
+      answer: "Our approach directly enhances three critical performance metrics: visibility (our SEO-optimized content increases organic discovery by 22%), conversion (compelling content and strategic visuals double conversion rates from industry averages), and customer satisfaction (accurate descriptions reduce return rates from 20%+ to just 5%)."
     },
     {
       question: "What types of visual content do you create beyond standard product photography?",
-      answer: "We produce a comprehensive visual catalog that showcases your products from every perspective. This includes detailed feature close-ups, material and texture highlights, scale comparison images, 360° product views, informative infographics explaining key features, lifestyle context photography, and demonstration videos. For enhanced content, we develop visual brand narratives that place your products in context. Our photographers employ specialized lighting techniques with polarized filters specifically designed for challenging materials like ceramics, glass, and reflective surfaces."
+      answer: "We produce a comprehensive visual catalog that showcases your products from every perspective. This includes detailed feature close-ups, material and texture highlights, scale comparison images, 360° product views, informative infographics explaining key features, lifestyle context photography, and demonstration videos. "
     },
     {
       question: "Do we need to ship our physical products to you for photography services?",
-      answer: "Yes, professional photography requires physical product samples in our controlled studio environment. Our specialized photography stations utilize lighting configurations specifically calibrated for different product categories and materials to achieve optimal results. For larger product volumes, we can evaluate the possibility of establishing an on-site studio at your location to streamline the process. We ensure products are returned in their original condition after the photography process is complete."
+      answer: "Yes, professional photography requires physical product samples in our controlled studio environment. We ensure products are returned in their original condition after the photography process is complete. For larger product volumes, we can evaluate the possibility of establishing an on-site studio at your location to streamline the process."
     }
   ];
 
@@ -49,7 +49,7 @@ export default function Home() {
     <div className="py-26 px-4 sm:px-6 lg:px-8 bg-[#001F3F] border-t border-[#94B4C1]/40 section">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-extrabold text-[#F6FCDF] tracking-tight sm:text-4xl">
+          <h1 className="text-4xl font-extrabold text-[#F6FCDF] tracking-tight sm:text-[40px]">
             Frequently Asked Questions
           </h1>
           <div className="mt-3 h-1 w-20 bg-lime-400 mx-auto rounded-full"></div>
@@ -68,7 +68,7 @@ export default function Home() {
                 className="w-full px-6 py-2 flex justify-between items-center focus:outline-none"
                 aria-expanded={activeIndex === index}
               >
-                <h3 className={`text-lg md:text-md text-left text-[#001F3F] p-0 ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
+                <h3 className={`text-lg md:text-[18px] text-left text-[#001F3F] p-0 ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
                 > {faq.question}
                 </h3>
                 
@@ -96,7 +96,7 @@ export default function Home() {
                 activeIndex === index ? 'max-h-[900px] p-0' : 'max-h-0'
               }`}>
                 <div className="px-6 pb-5">
-                  <p className="text-[#001F3F]/90 leading-relaxed">{faq.answer}</p>
+                  <p className="text-[#001F3F]/90 leading-relaxed text-[14px]">{faq.answer}</p>
                 </div>
               </div>
             </div>

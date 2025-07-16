@@ -11,7 +11,7 @@ export default function SocialBar() {
   ];
 
   return (
-    <div className="fixed right-10 p-2 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-4">
+    <div className="hidden md:fixed md:right-10 md:p-2 md:top-1/2 md:transform md:-translate-y-1/2 md:z-50 md:flex md:flex-col md:space-y-4">
       {socialLinks.map((social, index) => (
         <a
           key={index}
