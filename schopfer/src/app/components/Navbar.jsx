@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 flex justify-center z-20 bg-transparent">
-      <div className="w-full text-[#001F3F] max-w-[1350px] mx-auto bg-[#F6FCDF] shadow-md flex items-center justify-between px-10 py-3 rounded-b-2xl border-b border-[#94B4C1]/40">
+      <div className="w-full text-[#001F3F] max-w-[1350px] mx-auto bg-[#FFFAFA] shadow-md flex items-center justify-between px-10 py-3 rounded-b-2xl border-b border-[#94B4C1]/40">
 
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -46,7 +46,7 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
 
-            <div className="fixed inset-0 bg-[#F6FCDF] z-30 flex flex-col p-6 space-y-4 overflow-y-auto">
+            <div className="fixed inset-0 bg-[#FFFAFA] z-30 flex flex-col p-6 space-y-4 overflow-y-auto">
                 
                 {/* Top: Logo + Close */}
                 <div className="flex items-center justify-between border-b border-[#94B4C1] pb-2">

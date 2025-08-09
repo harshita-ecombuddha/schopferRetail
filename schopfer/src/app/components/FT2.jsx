@@ -86,7 +86,7 @@ export default function FeatureTabs() {
   };
 
   return (
-    <div className="w-full max-w-8xl mx-auto px-3 sm:px-4 py-8 sm:py-16 lg:py-28 section lg:h-screen bg-[#F6FCDF] border-t border-[#94B4C1]/40 flex lg:items-center">
+    <div className="w-full max-w-8xl mx-auto px-3 sm:px-4 py-8 sm:py-16 lg:py-28 section lg:h-screen bg-[#FFFAFA] border-t border-[#94B4C1]/40 flex lg:items-center">
       {/* Card container with responsive height */}
       <div className="rounded-xl shadow-xl overflow-hidden max-w-7xl mx-auto bg-white border border-[#94B4C1]/30 w-full flex flex-col">
         {/* Main content display area with responsive height */}

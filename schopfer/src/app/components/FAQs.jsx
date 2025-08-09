@@ -49,7 +49,7 @@ export default function Home() {
     <div className="py-26 px-4 sm:px-6 lg:px-8 bg-[#001F3F] border-t border-[#94B4C1]/40 section">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-extrabold text-[#F6FCDF] tracking-tight sm:text-[40px]">
+          <h1 className="text-4xl font-extrabold text-[#FFFAFA] tracking-tight sm:text-[40px]">
             Frequently Asked Questions
           </h1>
           <div className="mt-3 h-1 w-20 bg-lime-400 mx-auto rounded-full"></div>
@@ -59,7 +59,7 @@ export default function Home() {
           {faqData.map((faq, index) => (
             <div 
               key={index}
-              className={`bg-[#F6FCDF] rounded-xl shadow-md overflow-hidden transition-all duration-300 ${
+              className={`bg-[#FFFAFA] rounded-xl shadow-md overflow-hidden transition-all duration-300 ${
                 activeIndex === index ? 'ring-2 ring-[#859F3D] ring-opacity-70' : 'hover:shadow-lg'
               }`}
             >

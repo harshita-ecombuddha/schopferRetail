@@ -39,7 +39,7 @@ export default function Main() {
       }, [])
 
   return (
-    <section className="w-full section min-h-screen bg-[#F6FCDF] text-[#001F3F] flex flex-col">
+    <section className="w-full section min-h-screen bg-[#FFFAFA] text-[#001F3F] flex flex-col">
 
       {/* Hero Section */}
       <div className="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-6 md:px-12 lg:px-16 py-6 pt-26 sm:py-12  md:py-16 md:pt-24 lg:pt-20 lg:pb-26 max-w-7xl mx-auto flex-1">

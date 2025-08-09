@@ -84,7 +84,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-12 px-4 md:py-42 md:px-6 lg:px-10 section h-screen bg-[#F6FCDF] border-t border-[#94B4C1]/40">
+    <section className="py-12 px-4 md:py-42 md:px-6 lg:px-10 section h-screen bg-[#FFFAFA] border-t border-[#94B4C1]/40">
       <h2 className="text-3xl md:text-[40px] font-bold text-[#1E488F] mb-8 md:mb-12 text-center">
         Hear from our clients
       </h2>

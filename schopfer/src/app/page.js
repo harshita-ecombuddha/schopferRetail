@@ -15,7 +15,7 @@ export default function Home() {
   return (
       <>
       <Navbar />
-      <SocialBar />
+      {/* <SocialBar /> */}
       <SnapScrollWrapper>
         <Main />
         <ProblemsCard />

@@ -2,7 +2,7 @@ import { ChevronRight, Edit, Image, PieChart } from 'lucide-react';
 
 export default function ProblemsCard() {
     return (
-        <div id="features" className="w-full mx-auto px-4 sm:px-6 lg:px-6 bg-[#F6FCDF] py-8 sm:py-12 lg:p-14 lg:px-20 lg:py-38 section min-h-screen lg:h-screen border-t border-[#94B4C1]/40 flex flex-col justify-center">
+        <div id="features" className="w-full mx-auto px-4 sm:px-6 lg:px-6 bg-[#FFFAFA] py-8 sm:py-12 lg:p-14 lg:px-20 lg:py-38 section min-h-screen lg:h-screen border-t border-[#94B4C1]/40 flex flex-col justify-center">
         <h2 className="text-xl sm:text-2xl lg:text-[40px] font-bold text-center text-[#001F3F] mb-8 sm:mb-10 lg:mb-12">
           How We Transform Your <span className="text-lime-600">Product Listings</span>
         </h2>

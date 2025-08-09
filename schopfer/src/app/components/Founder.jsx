@@ -4,7 +4,7 @@ import { ChevronRight, Phone } from 'lucide-react';
 
 export default function Founder() {
   return (
-    <section className="bg-[#F6FCDF] text-[#F6FCDF] py-32 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 section h-screen border-t border-[#94B4C1]/40">
+    <section className="bg-[#FFFAFA] text-[#F6FCDF] py-32 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 section h-screen border-t border-[#94B4C1]/40">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         
         {/* Image */}

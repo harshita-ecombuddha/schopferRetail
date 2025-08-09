@@ -89,7 +89,7 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 lg:pt-24 section min-h-screen lg:h-screen bg-[#F6FCDF] border-t border-[#94B4C1]/40 flex items-center">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 lg:pt-24 section min-h-screen lg:h-screen bg-[#FFFAFA] border-t border-[#94B4C1]/40 flex items-center">
       <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-0 w-full">
         <div className="text-center mb-8 sm:mb-12 lg:mb-18">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-bold text-[#1E488F] tracking-tight">
