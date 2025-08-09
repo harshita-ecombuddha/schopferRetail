@@ -9,7 +9,6 @@ import FAQs from "./components/FAQs"
 import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
-import FT2 from "./components/FT2";
 
 export default function Home() {
   return (
@@ -19,8 +18,7 @@ export default function Home() {
       <SnapScrollWrapper>
         <Main />
         <ProblemsCard />
-        {/* <FeatureTabs /> */}
-        <FT2 />
+        <FeatureTabs />
         <Process />
         <FAQs />
         <Founder />

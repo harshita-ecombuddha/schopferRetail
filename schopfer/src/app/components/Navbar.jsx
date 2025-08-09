@@ -22,8 +22,8 @@ export default function Header() {
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#" className="font-semibold text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/about-us")}>About Us</a>
-          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/case-study")}>Case Studies</a>
-          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors">Blogs</a>
+          {/* <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/case-study")}>Case Studies</a>
+          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors">Blogs</a> */}
         </nav>
 
         {/* Desktop Buttons */}
@@ -45,8 +45,12 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-
-            <div className="fixed inset-0 bg-[#FFFAFA] z-30 flex flex-col p-6 space-y-4 overflow-y-auto">
+        <>
+          {/* Backdrop */}
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-20" onClick={() => setMenuOpen(false)}></div>
+          
+          {/* Menu Content */}
+          <div className="fixed top-0 left-0 right-0 bg-white/90 z-30 flex flex-col p-6 space-y-4 overflow-y-auto shadow-2xl">
                 
                 {/* Top: Logo + Close */}
                 <div className="flex items-center justify-between border-b border-[#94B4C1] pb-2">
@@ -63,20 +67,21 @@ export default function Header() {
                 {/* Nav Items */}
                 <nav className="flex flex-col text-[#001F3F] space-y-4">
                 <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">About Us</a>
-                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Case Studies</a>
-                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Blogs</a>
+                {/* <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Case Studies</a>
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Blogs</a> */}
                 </nav>
 
                 {/* Buttons */}
                 <div className="flex flex-col space-y-4 mt-auto border-t border-[#94B4C1] pt-6">
-                <button className="bg-[#84cc16] text-[#F6FCDF] py-3 px-5 rounded-lg hover:bg-opacity-90 transition-all" onClick={() => router.push("/contact")}>
+                 <button className="bg-[#000] text-[#fff] font-bold py-2 px-5 rounded-lg hover:bg-[#040404cb] transition-all" onClick={() => router.push("/contact")}>
                     Contact Us
                 </button>
                 </div>
 
-            </div>
-)}
-
-    </header>
-  );
-}
+                         </div>
+          </>
+       )}
+ 
+     </header>
+   );
+ }
