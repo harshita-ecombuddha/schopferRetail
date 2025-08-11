@@ -27,13 +27,13 @@ export default function Footer() {
                   <li><a href="#" className="hover:text-[#F6FCDF] transition-colors">What We Do</a></li>
                 </ul>
               </div>
-              {/* <div>
+              <div>
                 <h4 className="text-lg font-semibold mb-3 text-[#F6FCDF]">Resources</h4>
                 <ul className="space-y-2 text-[#94B4C1]">
-                  <li><a href="#" className="hover:text-[#F6FCDF] transition-colors">Blogs</a></li>
-                  <li><a href="#" className="hover:text-[#F6FCDF] transition-colors">Case Studies</a></li>
+                  <li><a href="/blog" className="hover:text-[#F6FCDF] transition-colors">Blogs</a></li>
+                  <li><a href="/case-study" className="hover:text-[#F6FCDF] transition-colors">Case Studies</a></li>
                 </ul>
-              </div> */}
+              </div>
               <div>
                 <h4 className="text-lg font-semibold mb-3 text-[#F6FCDF]">Get In Touch</h4>
                 <ul className="space-y-1 text-[#94B4C1]">

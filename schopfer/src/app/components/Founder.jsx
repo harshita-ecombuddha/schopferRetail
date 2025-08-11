@@ -1,8 +1,10 @@
 'use client'
 
 import { ChevronRight, Phone } from 'lucide-react';
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useState } from "react";
 
-export default function Founder() {
+  const [showCal, setShowCal] = useState(false);
   return (
     <section className="bg-[#FFFAFA] text-[#F6FCDF] py-32 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 section h-screen border-t border-[#94B4C1]/40">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -46,11 +48,27 @@ export default function Founder() {
             
             {/* Call-to-action button */}
             <div className="flex justify-start">
-              <button className="flex items-center px-5 py-3  hover:bg-white bg-lime-500 border-2 text-[#000] font-bold hover:border-black border-lime-400 rounded-md transition-colors ease-in-out duration-500 ">
+              <button
+                className="flex items-center px-5 py-3 hover:bg-white bg-lime-500 border-2 text-[#000] font-bold hover:border-black border-lime-400 rounded-md transition-colors ease-in-out duration-500"
+                onClick={() => setShowCal(true)}
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 Schedule a call
                 <ChevronRight className="w-4 h-4 ml-1" />
               </button>
+              {showCal && (
+                <div style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.5)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <div style={{background: '#fff', borderRadius: '12px', padding: '24px', maxWidth: '90vw', maxHeight: '90vh', width: '600px', boxShadow: '0 2px 16px rgba(0,0,0,0.2)', position: 'relative', overflow: 'auto'}}>
+                    <button style={{position: 'absolute', top: 12, right: 16, fontSize: 24, background: 'none', border: 'none', cursor: 'pointer'}} onClick={() => setShowCal(false)}>&times;</button>
+                    <Cal
+                      namespace="quick-call"
+                      calLink="schopfer.retail/quick-call"
+                      style={{width: "100%", height: "600px", overflow: "scroll"}}
+                      config={{"layout":"month_view"}}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

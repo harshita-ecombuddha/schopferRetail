@@ -21,9 +21,10 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
+          <a href="#" className="font-semibold text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/")}>Home</a>
           <a href="#" className="font-semibold text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/about-us")}>About Us</a>
-          {/* <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/case-study")}>Case Studies</a>
-          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors">Blogs</a> */}
+          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/case-study")}>Case Studies</a>
+          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/blog")}>Blogs</a>
         </nav>
 
         {/* Desktop Buttons */}
@@ -66,9 +67,10 @@ export default function Header() {
 
                 {/* Nav Items */}
                 <nav className="flex flex-col text-[#001F3F] space-y-4">
-                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">About Us</a>
-                {/* <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Case Studies</a>
-                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Blogs</a> */}
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors" onClick={() => router.push("/")}>Home</a>
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors" onClick={() => router.push("/about-us")}>About Us</a>
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors" onClick={() => router.push("/case-study")}>Case Studies</a>
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors" onClick={() => router.push("/blog")}>Blogs</a>
                 </nav>
 
                 {/* Buttons */}
