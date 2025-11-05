@@ -6,52 +6,52 @@ import { ClipboardDocumentIcon, PhotoIcon, PlayIcon, DevicePhoneMobileIcon, Char
 export default function Process() {
   const [hoveredStep, setHoveredStep] = useState(null);
 
-  // Brand cohesive colors - white cards with lime green accents
+  // Brand cohesive colors - white cards with light blue accents
   const stepColors = [
     {
       bg: "bg-white", // White background
-      text: "text-[#1a365d]", // Navy text
-      iconBg: "bg-[#84cc16]", // Lime green icon background
-      iconColor: "text-white", // White icon
-      border: "border-[#84cc16]", // Lime green border
-      numberBg: "bg-white", // Lime green number background
-      numberText: "text-[#1a365d]" // White number text
+      text: "text-[#333366]", // Dark blue text
+      iconBg: "bg-[#D6E8F9]", // Light blue icon background
+      iconColor: "text-[#000000]", // Black icon
+      border: "border-[#D6E8F9]", // Light blue border
+      numberBg: "bg-white", // White number background
+      numberText: "text-[#333366]" // Dark blue number text
     },
     {
       bg: "bg-white",
-      text: "text-[#1a365d]",
-      iconBg: "bg-[#84cc16]",
-      iconColor: "text-white",
-      border: "border-[#84cc16]",
+      text: "text-[#333366]",
+      iconBg: "bg-[#D6E8F9]",
+      iconColor: "text-[#000000]",
+      border: "border-[#D6E8F9]",
       numberBg: "bg-white",
-      numberText: "text-[#1a365d]"
+      numberText: "text-[#333366]"
     },
     {
       bg: "bg-white",
-      text: "text-[#1a365d]",
-      iconBg: "bg-[#84cc16]",
-      iconColor: "text-white",
-      border: "border-[#84cc16]",
+      text: "text-[#333366]",
+      iconBg: "bg-[#D6E8F9]",
+      iconColor: "text-[#000000]",
+      border: "border-[#D6E8F9]",
       numberBg: "bg-white",
-      numberText: "text-[#1a365d]"
+      numberText: "text-[#333366]"
     },
     {
       bg: "bg-white",
-      text: "text-[#1a365d]",
-      iconBg: "bg-[#84cc16]",
-      iconColor: "text-white",
-      border: "border-[#84cc16]",
+      text: "text-[#333366]",
+      iconBg: "bg-[#D6E8F9]",
+      iconColor: "text-[#000000]",
+      border: "border-[#D6E8F9]",
       numberBg: "bg-white",
-      numberText: "text-[#1a365d]"
+      numberText: "text-[#333366]"
     },
     {
       bg: "bg-white",
-      text: "text-[#1a365d]",
-      iconBg: "bg-[#84cc16]",
-      iconColor: "text-white",
-      border: "border-[#84cc16]",
+      text: "text-[#333366]",
+      iconBg: "bg-[#D6E8F9]",
+      iconColor: "text-[#000000]",
+      border: "border-[#D6E8F9]",
       numberBg: "bg-white",
-      numberText: "text-[#1a365d]"
+      numberText: "text-[#333366]"
     }
   ];
 
@@ -89,21 +89,21 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 lg:pt-24 section min-h-screen lg:h-screen bg-[#FFFAFA] border-t border-[#94B4C1]/40 flex items-center">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 lg:pt-24 section min-h-screen lg:h-screen bg-white border-t border-[#94B4C1]/40 flex items-center">
       <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-0 w-full">
         <div className="text-center mb-8 sm:mb-12 lg:mb-18">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-bold text-[#1E488F] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-bold text-[#333366] tracking-tight">
             Our Process
           </h2>
-          <p className="mt-3 sm:mt-4 max-w-4xl mx-auto font-medium text-base sm:text-lg lg:text-[20px] text-[#001F3F]/80 px-4">
+          <p className="mt-3 sm:mt-4 max-w-4xl mx-auto font-medium text-base sm:text-lg lg:text-[20px] text-[#333366]/80 px-4">
             Our streamlined approach delivers quality results with 
             industry-leading turnaround times
           </p>
         </div>
 
         <div className="relative">
-          {/* Timeline connector - updated to lime green */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#84cc16] via-[#65a30d] to-[#84cc16] transform -translate-y-1/2 z-0"></div>
+          {/* Timeline connector - updated to light blue */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#D6E8F9] via-[#D6E8F9] to-[#D6E8F9] transform -translate-y-1/2 z-0"></div>
           
           {/* Process steps */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-4 relative z-10">
@@ -125,7 +125,7 @@ export default function Process() {
                     className={`
                       ${stepColors[index].bg} rounded-2xl p-3 sm:p-4 ${stepColors[index].border} border-2 
                       shadow-md transition-all duration-300 w-full max-w-xs sm:max-w-sm lg:max-w-4xl lg:max-h-[350px]
-                      ${isHovered ? 'transform -translate-y-2 shadow-xl scale-105 bg-gradient-to-br from-white to-[#84cc16]/5' : 'hover:shadow-lg hover:-translate-y-1'}
+                      ${isHovered ? 'transform -translate-y-2 shadow-xl scale-105 bg-gradient-to-br from-white to-[#D6E8F9]/5' : 'hover:shadow-lg hover:-translate-y-1'}
                     `}
                     style={{
                       transitionDelay: isHovered ? `${animationDelay}ms` : '0ms'

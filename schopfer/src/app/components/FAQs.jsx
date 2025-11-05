@@ -46,21 +46,21 @@ export default function Home() {
   };
 
   return (
-    <div className="py-26 px-4 sm:px-6 lg:px-8 bg-[#001F3F] border-t border-[#94B4C1]/40 section">
+    <div className="py-26 px-4 sm:px-6 lg:px-8 bg-white border-t border-[#94B4C1]/40 section">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-extrabold text-[#FFFAFA] tracking-tight sm:text-[40px]">
+          <h1 className="text-4xl font-extrabold text-[#333366] tracking-tight sm:text-[40px]">
             Frequently Asked Questions
           </h1>
-          <div className="mt-3 h-1 w-20 bg-lime-400 mx-auto rounded-full"></div>
+          <div className="mt-3 h-1 w-20 bg-[#D6E8F9] mx-auto rounded-full"></div>
         </div>
 
         <div className="space-y-2 pb-30">
           {faqData.map((faq, index) => (
             <div 
               key={index}
-              className={`bg-[#FFFAFA] rounded-xl shadow-md overflow-hidden transition-all duration-300 ${
-                activeIndex === index ? 'ring-2 ring-[#859F3D] ring-opacity-70' : 'hover:shadow-lg'
+              className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 border border-[#94B4C1]/30 ${
+                activeIndex === index ? 'ring-2 ring-[#D6E8F9] ring-opacity-70' : 'hover:shadow-lg'
               }`}
             >
               <button
@@ -68,14 +68,14 @@ export default function Home() {
                 className="w-full px-6 py-2 flex justify-between items-center focus:outline-none"
                 aria-expanded={activeIndex === index}
               >
-                <h3 className={`text-lg md:text-[18px] text-left text-[#001F3F] p-0 ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
+                <h3 className={`text-lg md:text-[18px] text-left text-[#333366] p-0 ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
                 > {faq.question}
                 </h3>
                 
                 <span className="ml-6 flex-shrink-0">
                   <svg
                     className={`w-6 h-6 transform transition-transform duration-300 ${
-                      activeIndex === index ? 'rotate-180 text-[#1E488F]' : 'text-[#94B4C1]'
+                      activeIndex === index ? 'rotate-180 text-[#333366]' : 'text-[#94B4C1]'
                     }`}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -96,7 +96,7 @@ export default function Home() {
                 activeIndex === index ? 'max-h-[900px] p-0' : 'max-h-0'
               }`}>
                 <div className="px-6 pb-5">
-                  <p className="text-[#001F3F]/90 leading-relaxed text-[14px]">{faq.answer}</p>
+                  <p className="text-[#333366]/90 leading-relaxed text-[14px]">{faq.answer}</p>
                 </div>
               </div>
             </div>

@@ -1,12 +1,14 @@
-'use client'
+"use client"
 
 import { ChevronRight, Phone } from 'lucide-react';
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useState } from "react";
 
+export default function Founder() {
   const [showCal, setShowCal] = useState(false);
+
   return (
-    <section className="bg-[#FFFAFA] text-[#F6FCDF] py-32 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 section h-screen border-t border-[#94B4C1]/40">
+    <section className="bg-white text-[#333366] py-32 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 section h-screen border-t border-[#94B4C1]/40">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         
         {/* Image */}
@@ -24,32 +26,32 @@ import { useState } from "react";
             
             {/* Line badge + heading */}
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-1 w-8 sm:w-10 bg-lime-500 rounded-full"></span>
-              <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#000]">
+              <span className="h-1 w-8 sm:w-10 bg-[#D6E8F9] rounded-full"></span>
+              <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#333366]">
                 Meet Naveen Kumar
               </h2>
             </div>
 
-            <h3 className="text-base sm:text-[22px] font-semibold text-lime-500 mb-3">
+            <h3 className="text-base sm:text-[22px] font-semibold text-[#333366] mb-3">
               Founder
             </h3>
 
-            <p className="italic text-sm sm:text-[18px] text-[#000]/80 mb-5 font-medium">
+            <p className="italic text-sm sm:text-[18px] text-[#333366]/80 mb-5 font-medium">
               E-commerce strategy, Amazon marketplace optimization, retail analytics
             </p>
 
-            <p className="text-[#000]/90 text-sm sm:text-lg leading-relaxed mb-4 font-normal">
+            <p className="text-[#333366]/90 text-sm sm:text-lg leading-relaxed mb-4 font-normal">
               With nearly a decade and a half of experience in the retail industry, Naveen is the driving force behind Schopfer Retail. His background at Amazon and education from IIM Calcutta equipped him with deep understanding of e-commerce strategy and marketplace dynamics.
             </p>
             
-            <p className="text-[#000]/90 text-sm sm:text-lg leading-relaxed mb-8 font-normal">
+            <p className="text-[#333366]/90 text-sm sm:text-lg leading-relaxed mb-8 font-normal">
               Naveen leads our strategic direction, ensuring every client receives solutions tailored to their specific business goals.
             </p>
             
             {/* Call-to-action button */}
             <div className="flex justify-start">
               <button
-                className="flex items-center px-5 py-3 hover:bg-white bg-lime-500 border-2 text-[#000] font-bold hover:border-black border-lime-400 rounded-md transition-colors ease-in-out duration-500"
+                className="flex items-center px-5 py-3 hover:bg-[#333366]/90 bg-[#333366] border-2 text-white font-bold hover:border-[#333366] border-[#333366] rounded-md transition-colors ease-in-out duration-500"
                 onClick={() => setShowCal(true)}
               >
                 <Phone className="w-4 h-4 mr-2" />

@@ -6,12 +6,12 @@ import { Mail, Send, BarChart2, Star, ChevronRight } from 'lucide-react';
 export default function FeatureTabs() {
   const [activeTab, setActiveTab] = useState('listing');
 
-  // Updated tab colors with more subtle, professional variations
+  // Updated tab colors with light blue background
   const tabs = [
-    { id: 'listing', label: 'Product Listing', icon: <Send className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#184775] to-[#0F2D4A]' },
-    { id: 'engagement', label: 'Engagement', icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#2D4263] to-[#1A2538]' },
-    { id: 'marketing', label: 'Marketing', icon: <Star className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#31572C] to-[#1E331A]' },
-    { id: 'photography', label: 'Photography', icon: <BarChart2 className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#4A5568] to-[#2D3748]' },
+    { id: 'listing', label: 'Product Listing', icon: <Send className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#D6E8F9] to-[#D6E8F9]' },
+    { id: 'engagement', label: 'Engagement', icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#D6E8F9] to-[#D6E8F9]' },
+    { id: 'marketing', label: 'Marketing', icon: <Star className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#D6E8F9] to-[#D6E8F9]' },
+    { id: 'photography', label: 'Photography', icon: <BarChart2 className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'from-[#D6E8F9] to-[#D6E8F9]' },
   ];
 
   const tabContent = {
@@ -65,17 +65,11 @@ export default function FeatureTabs() {
 
   const activeContent = tabContent[activeTab];
   const activeTabInfo = tabs.find(tab => tab.id === activeTab);
-  const activeGradient = activeTabInfo?.color || 'from-[#184775] to-[#0F2D4A]';
+  const activeGradient = activeTabInfo?.color || 'from-[#D6E8F9] to-[#D6E8F9]';
 
-  // Get the corresponding button color based on active tab - with more subtle tones
+  // Get the corresponding button color based on active tab
   const getButtonColor = (tabId) => {
-    switch(tabId) {
-      case 'listing': return 'bg-[#2B6CB0] hover:bg-[#2C5282]';
-      case 'engagement': return 'bg-[#4A5568] hover:bg-[#2D3748]';
-      case 'marketing': return 'bg-[#48BB78] hover:bg-[#38A169]';
-      case 'photography': return 'bg-[#718096] hover:bg-[#4A5568]';
-      default: return 'bg-[#2B6CB0] hover:bg-[#2C5282]';
-    }
+    return 'bg-[#333366] hover:bg-[#333366]/90';
   };
 
   // Function to truncate features list to maintain consistent card height
@@ -86,32 +80,32 @@ export default function FeatureTabs() {
   };
 
   return (
-    <div className="w-full max-w-8xl mx-auto px-3 sm:px-4 py-8 sm:py-16 lg:py-28 section lg:h-screen bg-[#FFFAFA] border-t border-[#94B4C1]/40 flex lg:items-center">
+    <div className="w-full max-w-8xl mx-auto px-3 sm:px-4 py-8 sm:py-16 lg:py-28 section lg:h-screen bg-white border-t border-[#94B4C1]/40 flex lg:items-center">
       {/* Card container with responsive height */}
       <div className="rounded-xl shadow-xl overflow-hidden max-w-7xl mx-auto bg-white border border-[#94B4C1]/30 w-full flex flex-col">
         {/* Main content display area with responsive height */}
-        <div className={`bg-gradient-to-br ${activeGradient} text-[#F6FCDF] p-4 sm:p-6 lg:p-8 lg:p-10 lg:h-[500px] flex-1`}>
+        <div className={`bg-gradient-to-br ${activeGradient} text-[#333366] p-4 sm:p-6 lg:p-8 lg:p-10 lg:h-[500px] flex-1`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 lg:items-center lg:h-full">            
             {/* Text content with overflow handling */}
             <div className="order-2 lg:order-1 lg:flex lg:flex-col lg:h-full">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-bold mb-2 sm:mb-3 lg:mb-4 leading-tight">{activeContent.title}</h2>
-              <p className="text-sm sm:text-base lg:text-[17px] mb-3 sm:mb-4 lg:mb-6 text-[#F6FCDF]/90 line-clamp-3 leading-relaxed">{activeContent.description}</p>
+              <p className="text-sm sm:text-base lg:text-[17px] mb-3 sm:mb-4 lg:mb-6 text-[#333366]/90 line-clamp-3 leading-relaxed">{activeContent.description}</p>
               
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 lg:mb-8 lg:overflow-y-auto lg:flex-grow">
                 {getDisplayFeatures(activeContent.features).map((feature, index) => (
-                  <div key={index} className="flex items-center bg-[#F6FCDF]/10 p-2 sm:p-3 rounded-lg">
-                    <div className={`rounded-full p-0.5 sm:p-1 mr-2 sm:mr-3 flex-shrink-0 ${getButtonColor(activeTab).split(' ')[0]}`}>
-                      <svg className="w-3 h-3 sm:w-4 sm:h-4 text-[#F6FCDF]" viewBox="0 0 20 20" fill="currentColor">
+                  <div key={index} className="flex items-center bg-white/50 p-2 sm:p-3 rounded-lg">
+                    <div className={`rounded-full p-0.5 sm:p-1 mr-2 sm:mr-3 flex-shrink-0 bg-[#333366]`}>
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="line-clamp-2 text-xs sm:text-sm lg:text-[14px] font-semibold">{feature}</span>
+                    <span className="line-clamp-2 text-xs sm:text-sm lg:text-[14px] font-semibold text-[#333366]">{feature}</span>
                   </div>
                 ))}
               </div>
               
               <div className="lg:mt-auto">
-                <button className={`group inline-flex items-center ${getButtonColor(activeTab)} text-[#F6FCDF] font-medium px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 rounded-lg transition-colors text-sm sm:text-base`}>
+                <button className={`group inline-flex items-center ${getButtonColor(activeTab)} text-white font-medium px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 rounded-lg transition-colors text-sm sm:text-base`}>
                   {activeContent.cta}
                   <ChevronRight className="ml-1 sm:ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -120,7 +114,7 @@ export default function FeatureTabs() {
             
             {/* Image with responsive dimensions */}
             <div className="order-1 lg:order-2 flex items-center justify-center h-full">
-              <div className="bg-[#F6FCDF]/10 p-1 sm:p-2 rounded-lg shadow-lg w-full max-w-sm sm:max-w-md aspect-video">
+              <div className="bg-white/50 p-1 sm:p-2 rounded-lg shadow-lg w-full max-w-sm sm:max-w-md aspect-video">
                 <img
                   src={activeContent.image || "/api/placeholder/400/300"}
                   alt={activeContent.title}
@@ -139,15 +133,15 @@ export default function FeatureTabs() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 flex flex-col items-center justify-center p-2 sm:p-3 lg:p-4 lg:p-6 min-w-[90px] sm:min-w-[110px] lg:min-w-[120px] transition-all ${
                 activeTab === tab.id 
-                  ? `bg-gradient-to-r ${tab.color} text-[#F6FCDF]`
-                  : 'bg-white text-[#001F3F] hover:bg-[#F6FCDF]/50'
+                  ? `bg-gradient-to-r ${tab.color} text-[#333366]`
+                  : 'bg-white text-[#333366] hover:bg-[#D6E8F9]/50'
               }`}
             >
               <div className={`rounded-full p-1 sm:p-1.5 lg:p-2 mb-1 lg:mb-2 ${
-                activeTab === tab.id ? 'bg-[#F6FCDF]/20' : 'bg-[#94B4C1]/20'
+                activeTab === tab.id ? 'bg-white/50' : 'bg-[#D6E8F9]/50'
               }`}>
                 {React.cloneElement(tab.icon, { 
-                  className: `w-4 h-4 sm:w-5 sm:h-5 ${activeTab === tab.id ? 'text-[#F6FCDF]' : 'text-[#001F3F]'}`
+                  className: `w-4 h-4 sm:w-5 sm:h-5 ${activeTab === tab.id ? 'text-[#000000]' : 'text-[#333366]'}`
                 })}
               </div>
               <span className="font-medium text-xs sm:text-sm text-center leading-tight">{tab.label}</span>
